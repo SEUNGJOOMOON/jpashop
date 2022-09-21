@@ -6,7 +6,7 @@ plugins {
 
 group = 'jpabook'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '18'
+sourceCompatibility = '1.8'
 
 configurations {
 	compileOnly {
@@ -22,7 +22,8 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
-	implementation 'com.github.gavlyukovskiy:p6spy-spring-boot-starter:1.5.6' // jpa 로그를 파라메터까지 찍어줌.
+	implementation 'com.github.gavlyukovskiy:p6spy-spring-boot-starter:1.5.6'
+	implementation 'junit:junit:4.13.1'// jpa 로그를 파라메터까지 찍어줌.
     testImplementation 'junit:junit:4.13.1'
 	testImplementation 'junit:junit:4.13.1'
 	testImplementation 'junit:junit:4.13.1'
