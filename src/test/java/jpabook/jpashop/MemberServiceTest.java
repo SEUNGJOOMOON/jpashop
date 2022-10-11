@@ -1,6 +1,7 @@
 package jpabook.jpashop;
 
 import jpabook.jpashop.domain.Member;
+import jpabook.jpashop.repository.MemberRepository;
 import jpabook.jpashop.service.MemberService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -31,7 +32,7 @@ public class MemberServiceTest {
 
     @Test
     //@Rollback(false) //rollback 안하고 commit 수행
-    public void 회원가입() throws Exception{
+    public void join() throws Exception{
 
         Member member = new Member();
         member.setUsername("kim");
@@ -44,7 +45,7 @@ public class MemberServiceTest {
     }
 
     @Test(expected = IllegalStateException.class) // 해당 exception이 잡힐경우 테스트 성공
-    public void 중복회원() throws Exception{
+    public void check() throws Exception{
 
         Member member1 = new Member();
         member1.setUsername("kim1");

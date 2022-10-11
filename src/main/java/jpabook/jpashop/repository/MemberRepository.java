@@ -13,8 +13,9 @@ public class MemberRepository {
     @PersistenceContext
     private EntityManager em; // 스프링이 EntityManager 을 만들어서 injection 해준다.
 
-    public void save(Member member){
+    public Long save(Member member){
         em.persist(member); // pk를 키값으로 리턴해줌.
+        return member.getId();
     }
 
     public Member findOne(Long id){
