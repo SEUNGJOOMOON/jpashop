@@ -40,7 +40,7 @@ public class MemberServiceTest {
         Long savedId = memberService.join(member);
 
         //em.flush(); // 실제 쿼리 insert 수행
-        assertEquals(member, memberRepository.find(savedId));
+        assertEquals(member, memberRepository.findOne(savedId));
 
     }
 
